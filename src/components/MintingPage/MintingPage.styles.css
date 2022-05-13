@@ -1,0 +1,23 @@
+.quantity > input {
+    width: 60px;
+    margin: 15px;
+    padding-left: 23px;
+}
+
+.quantity > button {
+    width: 30px;
+    height: 30px;
+}
+
+.wallet_btn {
+    border: 1px solid black;
+    display: inline-block;
+    padding: 4px;
+    margin-left: 35px;
+}
+
+.wallet_btn > a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
