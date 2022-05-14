@@ -16,11 +16,13 @@ import {
 import "./App.css";
 import Dashboard from "./components/admin/dashboard";
 import Login from "./components/admin/login";
+import Header from "./components/Header/Header";
 import MintingOptions from "./components/MintingOptions/MintingOptions.component";
 
 function App() {
   return (
     <Router>
+      <Header/>
       <Switch>
         <Route exact path="/">
           <MintingOptions />

@@ -14,8 +14,8 @@ import './ConnectWalletButton.styles.css'
 const ConnectWalletButton = () => {
     const {connectWallet} = useContext(WalletContext);
     return (
-        <div className='connectWalletButton'>
-            <button onClick={connectWallet}>Connect Wallet</button>
+        <div className='custom-button'>
+            <button className='btn btn-primary' onClick={connectWallet}>Connect Wallet</button>
         </div>
     )
 }

@@ -18,15 +18,15 @@ function MintingPage() {
     return (
         <div className="check-footer">
                 <form id="myform" method="POST" className="quantity" action="#">
-                    <button type="button" className="qtyminus minus" field="quantity" onClick={handleMinus}><i className="fa-solid fa-minus">&minus;</i></button>
+                    <button type="button" className="qty-button minus" field="quantity" onClick={handleMinus}><i className="fa-solid fa-minus">&minus;</i></button>
                     <input type="number" name="quantity" value={amount} className="qty" readOnly />
-                    <button type="button" className="qtyplus plus" field="quantity" onClick={handlePlus}><i className="fa-solid fa-plus">&#43;</i></button>
+                    <button type="button" className="qty-button plus" field="quantity" onClick={handlePlus}><i className="fa-solid fa-plus">&#43;</i></button>
                 </form>
 
                 <div className="wallet_btn">    
-                    <button onClick={mintNow}> Buy </button>
+                    <button className='btn btn-primary' style={{marginLeft: '-33px'}} onClick={mintNow}> Buy </button>
                 </div>
-            </div>
+        </div>
     )
 }
 

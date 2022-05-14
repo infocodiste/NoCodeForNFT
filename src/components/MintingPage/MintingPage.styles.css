@@ -21,3 +21,17 @@
     color: black;
     cursor: pointer;
 }
+
+.qty-button {
+    border: none;
+    border-radius: 3px;
+    background-color: aquamarine;
+}
+
+.check-footer {
+    text-align: center;
+}
+
+.check-footer input {
+    background-color: gray;
+}

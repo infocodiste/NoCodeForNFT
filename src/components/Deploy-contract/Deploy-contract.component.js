@@ -52,7 +52,11 @@ const DeployContract = (props) => {
       });
   };
 
-  return <button onClick={handleClick}>Deploy Contract</button>;
+  return (
+  <div className="custom-button">
+    <button className="btn btn-primary" onClick={handleClick}>Deploy Contract</button>
+  </div>
+  );
 };
 
 export default React.memo(DeployContract);

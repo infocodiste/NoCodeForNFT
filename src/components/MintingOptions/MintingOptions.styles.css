@@ -5,13 +5,41 @@
 }
 
 .minting-options {
-    width: 40%;
-    background-color: aqua;
+    /* width: 40%; */
+    background-color: #05386b;
+    padding: 25px;
 }
 
+.minting-options label {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.minting-options input {
+    background-color: gray;
+    cursor: auto;
+    color: white;
+    border: none;
+}
+
+.minting-options input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+    /* background-color: gray; */
+}
+
+.minting-options input:checked{
+    /* background-color: green; */
+}
+
+.minting-options input:hover,  .minting-options input:focus{
+    border: 2px solid green;
+}
 .code-display {
-    width: 45%;
-    background-color: blueviolet;
+    height: 70vh;
+    /* width: 45%; */
+    /* background-color: blueviolet; */
 }
 
 .minting-options label {
@@ -37,11 +65,21 @@ input[type=checkbox] {
 }
 
 .child {
-    flex: 1 1 40%;
+    /* flex: 1 1 40%; */
     margin-top: 20px;
-    width: 50px;
+    /* width: 50px; */
 }
 
 .connectButton {
     margin-top: 20px;
+}
+
+.minting-form {
+    /* display: flex;
+    justify-content: space-between; */
+}
+
+.presale {
+    width: 39vw;
+    text-align: center;
 }

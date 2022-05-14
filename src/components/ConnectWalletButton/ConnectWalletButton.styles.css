@@ -1,3 +1,4 @@
-.connectWalletButton {
-    margin-top: 15px;
+.custom-button {
+    /* margin-top: 15px; */
+    width: 150px;
 }

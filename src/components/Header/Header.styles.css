@@ -1,0 +1,14 @@
+.header {
+    display: flex;
+    align-items: center;
+    height: 15vh;
+    width: 100%;
+    background-color: rebeccapurple;
+}
+
+.header-name {
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+    padding-left: 30px;
+}
