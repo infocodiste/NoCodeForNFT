@@ -13,7 +13,7 @@ import DeployContract from "../Deploy-contract/Deploy-contract.component";
 import MintingPage from "../MintingPage/MintingPage.component";
 import "./MintingOptions.styles.css";
 
-const contractAddress = "0xFec050B5DF1C1C2BA11Fb5C2E3579510228FE2D7";
+// const contractAddress = "0xFec050B5DF1C1C2BA11Fb5C2E3579510228FE2D7";
 
 function MintingOptions() {
   // Gets the required data from the Wallet context.
@@ -22,7 +22,7 @@ function MintingOptions() {
     web3Provider,
     contract,
     isPreSale,
-    // contractAddress,
+    contractAddress,
     handleCheckboxChange,
     handleTextChange,
     handleNumberChange,
@@ -263,29 +263,38 @@ function MintingOptions() {
 
       <div className="container">
         <div className="row" style={{ width: "100%" }}>
-          <div
-            className="col-md-6 justify-content-center"
-            style={{ border: "1px solid #f0f0f0", marginTop: "10px", borderRadius: '5px' }}
-          >
-            <h3 className="purchase-tokens-heading">Purchase Tokens</h3>
-
-            {contractAddress ? <MintingPage /> : null}
-          </div>
+          {contractAddress ? (
+            <>
+              <div
+                className="col-md-6 justify-content-center"
+                style={{
+                  border: "1px solid #f0f0f0",
+                  marginTop: "10px",
+                  borderRadius: "5px",
+                }}
+              >
+                <h3 className="purchase-tokens-heading">Purchase Tokens</h3>
+                <MintingPage />
+              </div>
+            </>
+          ) : null}
         </div>
 
         {/* {isPreSale && contract ? ( */}
-        <div className="presale">
-          {true && true ? (
-            <button
-              type="button"
-              className="btn btn-primary"
-              onClick={changePreSaleStatus}
-            >
-              {" "}
-              {/* {isPreSaleActive ? "Deactivate Presale" : "Activate Presale"} */}
-              {false ? "Deactivate Presale" : "Activate Presale"}
-            </button>
-          ) : null}
+        <div className="row" style={{ width: "100%" }}>
+          <div className="col-md-6 d-flex justify-content-center">
+            {isPreSale && contract ? (
+              <button
+                type="button"
+                className="btn btn-primary"
+                onClick={changePreSaleStatus}
+              >
+                {" "}
+                {isPreSaleActive ? "Deactivate Presale" : "Activate Presale"}
+                {/* {false ? "Deactivate Presale" : "Activate Presale"} */}
+              </button>
+            ) : null}
+          </div>
         </div>
       </div>
     </>
