@@ -105,6 +105,7 @@ function MintingOptions() {
   return (
     <>
       <div className="container minting-form">
+        <h3 className="minting-options-header">Minting Options</h3>
         <div className="row" style={{ width: "100%" }}>
           <div className="col-md-6">
             <div className="minting-options child">
@@ -220,7 +221,7 @@ function MintingOptions() {
             </div>
           </div>
 
-          <div className="col-md-6" style={{position: 'relative'}}>
+          <div className="col-md-6" style={{ position: "relative" }}>
             <div className="container code-display child">
               <textarea
                 className="display-contract"
@@ -228,22 +229,25 @@ function MintingOptions() {
                 onChange={handleContractChange}
               ></textarea>
 
-              <div className="row" style={{position: 'absolute', bottom: '0'}} >
+              <div
+                className="row"
+                style={{ position: "absolute", bottom: "0" }}
+              >
                 <div className="col-md-4">
                   <div className="custom-button">
-                  <button
-                    type="button"
-                    className="compile-contract btn btn-primary"
-                    onClick={compileContract}
-                  >
-                    Compile
-                  </button>
-                </div>
+                    <button
+                      type="button"
+                      className="compile-contract btn btn-primary"
+                      onClick={compileContract}
+                    >
+                      Compile
+                    </button>
+                  </div>
                 </div>
 
                 <div className="col-md-4">
                   {web3Provider ? (
-                    <div style={{color: 'white'}}>
+                    <div style={{ color: "white" }}>
                       {" "}
                       <DeployContract /> {contractAddress}{" "}
                     </div>
@@ -258,22 +262,31 @@ function MintingOptions() {
       </div>
 
       <div className="container">
-        <div className="row" style={{width: '100%'}}>
-          <div className="col-md-6 justify-content-center">
+        <div className="row" style={{ width: "100%" }}>
+          <div
+            className="col-md-6 justify-content-center"
+            style={{ border: "1px solid #f0f0f0", marginTop: "10px", borderRadius: '5px' }}
+          >
+            <h3 className="purchase-tokens-heading">Purchase Tokens</h3>
+
             {contractAddress ? <MintingPage /> : null}
           </div>
         </div>
 
-          {/* {isPreSale && contract ? ( */}
-          <div className="presale">
+        {/* {isPreSale && contract ? ( */}
+        <div className="presale">
           {true && true ? (
-            <button type="button" className="btn btn-primary" onClick={changePreSaleStatus}>
+            <button
+              type="button"
+              className="btn btn-primary"
+              onClick={changePreSaleStatus}
+            >
               {" "}
               {/* {isPreSaleActive ? "Deactivate Presale" : "Activate Presale"} */}
               {false ? "Deactivate Presale" : "Activate Presale"}
             </button>
           ) : null}
-          </div>
+        </div>
       </div>
     </>
   );

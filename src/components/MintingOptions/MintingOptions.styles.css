@@ -4,6 +4,11 @@
     flex-wrap: wrap;
 }
 
+.minting-options-header {
+    color: white;
+    margin-top: 40px;
+}
+
 .minting-options {
     /* width: 40%; */
     background-color: #05386b;
@@ -82,4 +87,9 @@ input[type=checkbox] {
 .presale {
     width: 39vw;
     text-align: center;
+}
+
+.purchase-tokens-heading {
+    color: white;
+    margin-top: 20px;
 }
